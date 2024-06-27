@@ -1,7 +1,16 @@
 ## 1.15.0 (unreleased)
 
+- feat: add clear button in the send tab (@Caesarovich)
+- feat: add URL view when sharing via link that shows the URL in bigger font (@harriseldon)
+- feat(desktop): show progress in the taskbar (@NightFeather0615)
+- feat: add discovery timeout setting for advanced users (@o2e)
+- fix: sanitize file names with invalid characters (@Caesarovich)
+- fix: UI overflow when window height is too small (@CHUNG-HAO)
+- fix(ios): make documents files visible to the Finder / AppleDevices app (@twinkles-twinstar)
 - fix(windows): correctly remove tray icon when closing the app (@zpp0196)
-- i18n: add Serbian (@nebojsatomic)
+- fix(windows): don't keep file open (@NightFeather0615)
+- fix(linux): compatibility with newer libayatana versions (@ix5)
+- i18n: add Serbian (@nebojsatomic), Finnish (@jooapa), Romanian (@UnifeGi)
 
 ## 1.14.0 (2024-02-26)
 

@@ -46,6 +46,7 @@ class _StringsFr extends Translations {
 	@override late final _StringsChangelogPageFr changelogPage = _StringsChangelogPageFr._(_root);
 	@override late final _StringsAliasGeneratorFr aliasGenerator = _StringsAliasGeneratorFr._(_root);
 	@override late final _StringsDialogsFr dialogs = _StringsDialogsFr._(_root);
+	@override late final _StringsSanitizationFr sanitization = _StringsSanitizationFr._(_root);
 	@override late final _StringsTrayFr tray = _StringsTrayFr._(_root);
 	@override late final _StringsWebFr web = _StringsWebFr._(_root);
 	@override late final _StringsAssetPickerFr assetPicker = _StringsAssetPickerFr._(_root);
@@ -221,9 +222,9 @@ class _StringsReceiveOptionsPageFr extends _StringsReceiveOptionsPageEn {
 
 	// Translations
 	@override String get title => 'Options';
-	@override String get destination => '${_root.settingsTab.receive.destination}';
+	@override String get destination => _root.settingsTab.receive.destination;
 	@override String get appDirectory => '(LocalSend folder)';
-	@override String get saveToGallery => '${_root.settingsTab.receive.saveToGallery}';
+	@override String get saveToGallery => _root.settingsTab.receive.saveToGallery;
 	@override String get saveToGalleryOff => 'Désactivé automatiquement car des dossiers sont présents.';
 }
 
@@ -269,7 +270,7 @@ class _StringsWebSharePageFr extends _StringsWebSharePageEn {
 	);
 	@override String get requests => 'Requêtes';
 	@override String get noRequests => 'Aucune requête en attente.';
-	@override String get encryption => '${_root.settingsTab.network.encryption}';
+	@override String get encryption => _root.settingsTab.network.encryption;
 	@override String get autoAccept => 'Accepter automatiquement les requêtes';
 	@override String get encryptionHint => 'LocalSend utilise un certificat auto-signé. Vous devez l\'accepter dans le navigateur.';
 	@override String pendingRequests({required Object n}) => 'Requêtes en attente: ${n}';
@@ -353,6 +354,18 @@ class _StringsDialogsFr extends _StringsDialogsEn {
 	@override late final _StringsDialogsQuickActionsFr quickActions = _StringsDialogsQuickActionsFr._(_root);
 	@override late final _StringsDialogsQuickSaveNoticeFr quickSaveNotice = _StringsDialogsQuickSaveNoticeFr._(_root);
 	@override late final _StringsDialogsSendModeHelpFr sendModeHelp = _StringsDialogsSendModeHelpFr._(_root);
+	@override late final _StringsDialogsZoomFr zoom = _StringsDialogsZoomFr._(_root);
+}
+
+// Path: sanitization
+class _StringsSanitizationFr extends _StringsSanitizationEn {
+	_StringsSanitizationFr._(_StringsFr root) : this._root = root, super._(root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get empty => 'Le nom du fichier ne peut pas être vide';
+	@override String get invalid => 'Le nom du fichier contient des caractères non valides';
 }
 
 // Path: tray
@@ -362,7 +375,7 @@ class _StringsTrayFr extends _StringsTrayEn {
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get open => '${_root.general.open}';
+	@override String get open => _root.general.open;
 	@override String get close => 'Quitter LocalSend';
 }
 
@@ -373,7 +386,7 @@ class _StringsWebFr extends _StringsWebEn {
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get waiting => '${_root.sendPage.waiting}';
+	@override String get waiting => _root.sendPage.waiting;
 	@override String get rejected => 'Rejeté';
 	@override String get files => 'Fichiers';
 	@override String get fileName => 'Nom du fichier';
@@ -497,7 +510,7 @@ class _StringsSettingsTabReceiveFr extends _StringsSettingsTabReceiveEn {
 
 	// Translations
 	@override String get title => 'Reçu';
-	@override String get quickSave => '${_root.general.quickSave}';
+	@override String get quickSave => _root.general.quickSave;
 	@override String get autoFinish => 'Finir automatiquement';
 	@override String get destination => 'Destination';
 	@override String get downloads => '(Téléchargements)';
@@ -530,6 +543,7 @@ class _StringsSettingsTabNetworkFr extends _StringsSettingsTabNetworkEn {
 	@override String get deviceType => 'Type d\'appareil';
 	@override String get deviceModel => 'Modèle d\'appareil';
 	@override String get port => 'Port';
+	@override String get discoveryTimeout => 'Temps maximal de recherche';
 	@override String portWarning({required Object defaultPort}) => 'Il se peut que vous ne soyez pas détecté par d\'autres appareils car vous utilisez un port personnalisé. (par défaut : ${defaultPort})';
 	@override String get encryption => 'Chiffrement';
 	@override String get multicastGroup => 'Multicast';
@@ -662,7 +676,7 @@ class _StringsDialogsErrorDialogFr extends _StringsDialogsErrorDialogEn {
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.general.error}';
+	@override String get title => _root.general.error;
 }
 
 // Path: dialogs.favoriteDialog
@@ -747,7 +761,7 @@ class _StringsDialogsLocalNetworkUnauthorizedFr extends _StringsDialogsLocalNetw
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.dialogs.noPermission.title}';
+	@override String get title => _root.dialogs.noPermission.title;
 	@override String get description => 'LocalSend ne peut pas trouver d\'autres appareils sans la permission de scanner votre réseau local. Veuillez autoriser cette permission à LocalSend dans les paramètres.';
 	@override String get gotoSettings => 'Paramètres';
 }
@@ -828,7 +842,7 @@ class _StringsDialogsQuickSaveNoticeFr extends _StringsDialogsQuickSaveNoticeEn 
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.general.quickSave}';
+	@override String get title => _root.general.quickSave;
 	@override String get content => 'Les demandes de fichiers sont automatiquement acceptées. Sachez que tous les membres du réseau local peuvent vous envoyer des fichiers.';
 }
 
@@ -843,6 +857,16 @@ class _StringsDialogsSendModeHelpFr extends _StringsDialogsSendModeHelpEn {
 	@override String get single => 'Envoyer des fichiers à un récipient. La sélection sera effacée une fois l\'envoi du fichier terminé.';
 	@override String get multiple => 'Envoyer des fichiers à plusieurs récipients. La sélection ne sera pas effacée.';
 	@override String get link => 'Les récipients n\'ayant pas LocalSend installé peuvent télécharger les fichiers sélectionnés en ouvrant le lien dans leur navigateur.';
+}
+
+// Path: dialogs.zoom
+class _StringsDialogsZoomFr extends _StringsDialogsZoomEn {
+	_StringsDialogsZoomFr._(_StringsFr root) : this._root = root, super._(root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'URL';
 }
 
 // Path: settingsTab.general.brightnessOptions

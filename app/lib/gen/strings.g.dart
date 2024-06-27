@@ -3,8 +3,8 @@
 /// Original: assets/i18n
 /// To regenerate, run: `dart run slang`
 ///
-/// Locales: 35
-/// Strings: 10031 (286 per locale)
+/// Locales: 39
+/// Strings: 11506 (295 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -25,6 +25,7 @@ part 'strings_el.g.dart';
 part 'strings_es_ES.g.dart';
 part 'strings_eu.g.dart';
 part 'strings_fa.g.dart';
+part 'strings_fi.g.dart';
 part 'strings_fil_PH.g.dart';
 part 'strings_fr.g.dart';
 part 'strings_he.g.dart';
@@ -38,8 +39,11 @@ part 'strings_ne.g.dart';
 part 'strings_nl.g.dart';
 part 'strings_pl.g.dart';
 part 'strings_pt_BR.g.dart';
+part 'strings_pt_PT.g.dart';
+part 'strings_ro.g.dart';
 part 'strings_ru.g.dart';
 part 'strings_sr.g.dart';
+part 'strings_sr_Cyrl.g.dart';
 part 'strings_sv.g.dart';
 part 'strings_th.g.dart';
 part 'strings_tr.g.dart';
@@ -70,6 +74,7 @@ enum AppLocale with BaseAppLocale<AppLocale, Translations> {
 	esEs(languageCode: 'es', countryCode: 'ES', build: _StringsEsEs.build),
 	eu(languageCode: 'eu', build: _StringsEu.build),
 	fa(languageCode: 'fa', build: _StringsFa.build),
+	fi(languageCode: 'fi', build: _StringsFi.build),
 	filPh(languageCode: 'fil', countryCode: 'PH', build: _StringsFilPh.build),
 	fr(languageCode: 'fr', build: _StringsFr.build),
 	he(languageCode: 'he', build: _StringsHe.build),
@@ -83,8 +88,11 @@ enum AppLocale with BaseAppLocale<AppLocale, Translations> {
 	nl(languageCode: 'nl', build: _StringsNl.build),
 	pl(languageCode: 'pl', build: _StringsPl.build),
 	ptBr(languageCode: 'pt', countryCode: 'BR', build: _StringsPtBr.build),
+	ptPt(languageCode: 'pt', countryCode: 'PT', build: _StringsPtPt.build),
+	ro(languageCode: 'ro', build: _StringsRo.build),
 	ru(languageCode: 'ru', build: _StringsRu.build),
 	sr(languageCode: 'sr', build: _StringsSr.build),
+	srCyrl(languageCode: 'sr', scriptCode: 'Cyrl', build: _StringsSrCyrl.build),
 	sv(languageCode: 'sv', build: _StringsSv.build),
 	th(languageCode: 'th', build: _StringsTh.build),
 	tr(languageCode: 'tr', build: _StringsTr.build),
